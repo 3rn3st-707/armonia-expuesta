@@ -8,12 +8,21 @@ const TextHighlighter = () => {
   const [text, setText] = useState('');
   const [varClave, setVariable] = useState('C');
 
-  const handleChange = (event) => {
-    setText(event.target.value);
-  };
-
   const handleClick = (value) => {
     setVariable(value);
+  };
+
+  const handleChange = (event) => {
+    const inputText = event.target.value;
+    const lines = inputText.split('\n');
+    
+    if (lines.length > 30) {
+      const trimmedText = lines.slice(0, 30).join('\n');
+      setText(trimmedText);
+      alert('Máximo de 30 líneas excedido, edite su input');
+    } else {
+      setText(inputText);
+    }
   };
 
   const addSpaceAtEndOfLines = (text) => {
@@ -182,7 +191,7 @@ const TextHighlighter = () => {
             <button onClick={() => handleClick('Bb')}>SIb (Bb)</button>
             <button onClick={() => handleClick('B')}>SI (B)</button>
           </div>
-          
+
           <pre className="highlighted-text" style={{backgroundColor: '#161d24'}}>
             {[
               displayStrings[varClave],
