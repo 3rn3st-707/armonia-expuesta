@@ -115,9 +115,17 @@ const config = {
         title: 'Armonia Expuesta',
 
 
-          /*
+
 
         items: [
+
+
+        {
+          type: 'localeDropdown', // Adds a language switcher
+          position: 'right',
+        },
+
+                  /*
           {
             type: 'doc',
             docId: 'intro',
@@ -128,10 +136,11 @@ const config = {
           {to: '/textos/guerra', label: 'Más Textos', position: 'right'},
           {to: '/blog/taylorismo', label: 'Blog', position: 'right'},
           
+         */          
 
         ],
 
-         */
+
       },
       footer: {
         style: 'dark',

@@ -6,7 +6,7 @@
 
  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
-
+ @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html {
   background-image: url('/img/guitar&amp.jpg');
@@ -879,22 +879,22 @@ a.anchor {
 
 
 html[data-theme='dark'] rojo {
-  color: rgb(221, 80, 151) !important;
+  color: rgb(255, 121, 198) !important;
 
 }
 
 html[data-theme='dark'] a .rojo {
-  color: rgb(221, 80, 151) !important;
+  color: rgb(255, 121, 198) !important;
 
 }
 
 html[data-theme='dark'] .rojo {
-  color: rgb(221, 80, 151) !important;
+  color: rgb(255, 121, 198) !important;
 
 }
 
 html[data-theme='dark']  a .rojo {
-  color: rgb(221, 80, 151) !important;
+  color: rgb(255, 121, 198) !important;
 
 }
 
@@ -1138,11 +1138,7 @@ html[data-theme='light'] a .naranja2 {
 
 /* Visible state for fn-match divs */
 .fn-match.visible {
-  display: block;
-  background-color: #2a2f3a; /* Optional: Background for visibility */
-  padding: 8px;
-  margin-top: 8px;
-  border-radius: 4px;
+
   color: #ffffff; /* White text for contrast */
   font-size: 14px;
 }
@@ -1150,4 +1146,41 @@ html[data-theme='light'] a .naranja2 {
 /* Ensure fn-match divs appear below the highlighted text */
 .fn-match {
   width: fit-content;
+}
+
+
+/* ------------------------------------ */
+
+
+/*   reset button     */
+
+
+/* Wrapper for textarea and reset button */
+.textarea-container {
+  position: relative;
+  display: inline-block; /* Keeps container size to textarea */
+}
+
+/* Style reset button to match key buttons */
+.reset-button {
+  position: absolute;
+  top: 4px; /* Small offset from top */
+  right: 1px; /* Small offset from right */
+  background: #232930;; /* Example: matches typical Docusaurus button color */
+  color: white; /* Matches key buttons */
+  border: solid;
+  border-color: #00060a;
+  border-width: 2px;
+  border-radius: 3px;
+  padding: 6px 10px; /* Smaller padding for compact size */
+  cursor: pointer;
+  font-size: 100%;
+}
+
+
+
+/* Ensure textarea isn't overlapped */
+.textarea-container textarea {
+  width: 100%; /* Maintain full width */
+  box-sizing: border-box; /* Include padding/border in width */
 }
